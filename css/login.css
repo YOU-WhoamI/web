@@ -1,0 +1,93 @@
+.login-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 135px);
+}
+
+.login-title {
+  font-size: 48px;
+  color: #ececec;
+  text-shadow: 7px 8px 15px rgb(47, 98, 163);
+}
+
+.login-container {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  padding: 20px 20px;
+  background-color: #3c579b;
+  border-radius: 20px;
+  box-shadow: 0px 10px 15px 10px rgba(37, 66, 109, 0.5);
+}
+.login-container p { /* error訊息樣式 */
+  color: #da1d10;
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+.login-container form {
+  margin: 0;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 5px;
+  margin: 2px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  height: 35px;
+}
+
+/* 點擊輸入框，邊框會變亮藍色 */
+.login-container input:focus {
+  outline: none;
+  border: 1px solid #00cfff;
+  box-shadow: 0 0 8px rgba(0, 207, 255, 0.6);
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.forgot-password {
+  display: block;
+  text-align: right;
+  margin-top: 4px;
+}
+
+.login-container button {
+  display: block;
+  margin: 5% auto;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  min-width: 2rem;
+  max-width: 4rem;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #0f339e;
+}
+
+.login-container button:hover {
+  background-color: #245bffe0;
+}
+
+.login-container button a:visited {
+  color: #ffffff;
+}
+
+.login-container h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 12px;
+  color: #000000;
+}
+
+.footer-links {
+  text-align: center;
+  margin-top: 10px;
+}
