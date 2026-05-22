@@ -1,0 +1,249 @@
+/* div {
+  border: 1px solid #ffffff;
+} */
+
+.container {
+  flex-wrap: wrap;
+  display: flex;
+  max-width: 90%;
+  margin: 40px auto;
+  padding: 0 20px;
+  gap: 30px;
+  min-height: calc(100vh - 200px);
+  /* 100vh為視窗高度，視窗就是整個螢幕，-200px是header跟footer */
+  color: #ffffff;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  background-color: #0b111e;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 24px;
+  height: fit-content;
+  /*
+  fit-content是自動調整到內容的高度
+  內容有多高外框就是多高
+  */
+}
+
+.sidebar h2 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #38bdf8;
+}
+
+.select-group {
+  margin-bottom: 16px;
+}
+
+/* 側邊欄下拉選單樣式 */
+.sidebar select {
+  width: 100%;
+  padding: 10px;
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  color: #ffffff;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+/* 滑鼠移入時亮藍色外框 */
+.sidebar select:hover {
+  border-color: #38bdf8;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #1d4ed8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #1e40af;
+  box-shadow: 0 0 10px rgba(29, 78, 216, 0.5);
+}
+
+/* Content */
+.content {
+  flex: 1;
+}
+
+.title-section {
+  margin-bottom: 30px;
+}
+
+.title-section h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.title-section p {
+  color: #94a3b8;
+}
+
+/* Grid Layout */
+.grid {
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Laptap Cards */
+.card {
+  background-color: #0b111e;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  width: calc((100% - (20px * 3)) / 4);
+  /*
+  100%是grid的寬度
+  -20px*3是三個間距
+  20px是grid gap間距
+  *3是因為4張裡面有3個間距
+  除4是四張卡片 */
+  min-width: 280px;
+}
+
+.card:hover {
+  border-color: #38bdf8;
+  box-shadow: 0 4px 20px rgba(56, 189, 248, 0.15);
+}
+
+.laptop-image {
+  background-color: #ffffff;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #1e293b;
+}
+
+.info {
+  padding: 16px;
+}
+
+.info h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+}
+
+.specs {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.tag {
+  display: inline-block;
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #1e293b;
+  padding-top: 12px;
+}
+
+.spec {
+  font-weight: bold;
+  color: #f43f5e;
+  font-size: 1.1rem;
+}
+
+.detail-btn {
+  color: #38bdf8;
+  background: none;
+  border: none;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.detail-btn:hover {
+  text-decoration: underline;
+}
+
+/* 彈出視窗背景（遮罩層） */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  /* fixed是固定位置 */
+  top: 0;
+  /* top 0是最上層 */
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 99;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 彈出視窗主體 */
+.modal-content {
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 550px;
+  width: 100%;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+  position: relative;
+  /*  */
+  color: #f8fafc;
+}
+
+/* 關閉按鈕 */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #94a3b8;
+}
+
+.close-btn:hover {
+  color: #f1f5f9;
+}
+
+/* 詳細規格表格樣式 */
+.table {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #334155;
+}
+
+.table th {
+  color: #38bdf8;
+  width: 35%;
+}
+
+.card-img-top {
+  color: #000;
+  max-width: 100%;
+  max-height: 240px;
+  min-height: 240px;
+}

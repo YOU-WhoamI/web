@@ -1,0 +1,60 @@
+/* 首頁優化佈局 */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #0d1220;
+}
+
+.home-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 92vh;
+  padding: 60px 20px;
+}
+
+.home-title {
+  font-size: 4rem;
+  color: #ffffff;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 15px rgba(0, 207, 255, 0.4);
+}
+
+.home-subtitle {
+  font-size: 1.2rem;
+  color: #00cfff;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.description-text {
+  max-width: 650px;
+  color: #94a3b8;
+  line-height: 1.8;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 14px 45px;
+  background-color: #0530bb;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 207, 255, 0.3);
+}
+
+.cta-button:hover {
+  background-color: #00cfff;
+  color: #05080f;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(0, 207, 255, 0.4);
+}

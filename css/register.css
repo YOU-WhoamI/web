@@ -1,0 +1,93 @@
+.register {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* 最上面文字垂直:) */
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 135px);
+}
+
+.title {
+  font-size: 48px;
+  color: #ececec;
+  text-shadow: 7px 8px 15px rgb(47, 98, 163);
+}
+
+.container h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 12px;
+  color: #000000;
+}
+
+.container {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  padding: 20px 20px;
+  background-color: #3c579b;
+  border-radius: 20px;
+  box-shadow: 0px 10px 15px 10px rgba(37, 66, 109, 0.5);
+}
+
+/* 與外面的距離 */
+.container form {
+  margin: 0;
+}
+
+/* 輸入框居中 */
+.container input {
+  width: 100%;
+  padding: 2px;
+  /* placeholder文字距離 */
+  margin: 2px;
+  /* 輸入框之間距離 */
+  border: 1px solid #ccc;
+  /* 邊框顏色 */
+  border-radius: 10px;
+  height: 35px;
+}
+
+/* 點輸入邊框變亮藍色 */
+.container input:focus {
+  outline: none;
+  border: 1px solid #00cfff;
+  box-shadow: 0 0 8px rgba(0, 207, 255, 0.6);
+}
+
+.input {
+  margin-bottom: 15px;
+}
+
+.container button {
+  display: block;
+  margin: 5% auto;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  min-width: 2rem;
+  max-width: 4rem;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #0f339e;
+}
+
+.container button:hover {
+  background-color: #245bffe0;
+}
+
+
+.footer {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.container p {
+  color: #da1d10;
+  font-weight: bolder;
+  font-size: 14px;
+  align-items: center;
+  min-height: 18px;
+}

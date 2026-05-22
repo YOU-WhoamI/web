@@ -1,0 +1,250 @@
+/* 全站共用 */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  /* border-box包含padding和border在內的寬高計算方式
+  這樣就不用計算padding和border寬高 */
+}
+
+body {
+  font-size: 16px;
+  background-color: #0d1220;
+}
+
+.input,
+.input-group {
+  position: relative;
+  /* 定位 */
+  margin-bottom: 15px;
+}
+
+.input input,
+.input-group input {
+  padding-right: 30px;
+}
+
+/* 隱藏/顯示密碼 */
+.eye-icon {
+  /* 會找最近的relative
+  (最近的relative是input-group) */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  bottom: 8px;
+}
+
+/* Header */
+header {
+  width: auto;
+  display: flex;
+  padding: 10px 20px;
+  background-color: #101933e0;
+}
+
+.logo {
+  max-width: 340px;
+  min-width: 150px;
+  display: flex;
+  align-items: center;
+  height: 65px;
+  border-radius: 35px;
+}
+
+.nav-links {
+  flex-wrap: wrap;
+  display: flex;
+  /* flex是可以讓div橫向排列 */
+  align-items: center;
+  /* align-items讓div垂直置中 */
+  flex: 1;
+  justify-content: space-between;
+  /* 會使裡面兩個不同div的間距分成一半 */
+  list-style: none;
+  gap: 12px;
+}
+
+/* 區塊左跟右 */
+.left,
+.right {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-btn {
+  color: white;
+  font-size: 18px;
+  padding: 8px 16px;
+  margin-left: 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* 已點擊的連結顏色 */
+.nav-link:visited {
+  color: white;
+}
+
+/* .search-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 0;
+}
+
+點擊輸入框，改變邊框顏色
+(outline可以移除輸入框的邊框 讓邊框可以變成藍色)
+.search-input:focus {
+  outline: none;
+  border: 1px solid #00cfff;
+  box-shadow: 0 0 8px rgba(0, 207, 255, 0.6);
+} */
+
+.nav-btn:hover {
+  background-color: #0530bb;
+  transition: background-color 0.4s;
+  /* 滑鼠移入時的動畫效果(background-color是要改變的屬性) */
+  color: #ffffff;
+}
+
+.avatar-wrapper {
+  /* 給頭像定位 */
+  position: relative;
+}
+
+/* 點頭像開/關 (tabindex觸發) */
+.avatar-wrapper:focus-within .logout {
+  display: block;
+}
+
+/* 顯示頭像 */
+.avatar {
+  background-color: #ea00ff;
+  color: white;
+  width: 36px;
+  height: 36px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.logout {
+  font-size: 18px;
+  background-color: #172d70e0;
+  display: none;
+  position: absolute;
+  /* 脫離正常版面 自由定位(找最近的relative) */
+  right: 0;
+  top: calc(100% + 10px);
+  /* 選單距離頭像多高 calc計算方式是距離頭像+10px */
+  border: 1px solid #172d70e0;
+  border-radius: 4px;
+  min-width: 76px;
+  /* 最小寬度 */
+  z-index: 99;
+  /* 最高層(顯示在最外層) 1是一般內容 */
+}
+
+.logout a:link,
+.logout a:visited {
+  color: #00cfff;
+  text-decoration: none;
+}
+
+.logout li {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.logout ul {
+  list-style: none;
+  margin: 0;
+  padding: 6px 0;
+}
+
+.logout a:hover {
+  color: #7aafff;
+}
+
+
+
+/* Footer */
+.site-footer {
+  background-color: #101933e0;
+  color: #94a3b8;
+  padding: 50px 20px 20px;
+  margin-top: auto;
+  border-top: 1px solid #1e293b;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-info,
+.footer-links-group,
+.footer-notice {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-info h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  /* 每個字的間距 */
+}
+
+.footer-links-group h4,
+.footer-notice h4 {
+  color: #00cfff;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.footer-links-group ul {
+  list-style: none;
+}
+
+.footer-links-group ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links-group a {
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+.footer-links-group a:hover {
+  color: #00cfff;
+}
+
+.footer-notice p {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 12px;
+  color: #475569;
+}
