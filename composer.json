@@ -1,0 +1,17 @@
+{
+    "name": "caspar0304/web",
+    "autoload": {
+        "psr-4": {
+            "Caspar0304\\Web\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Idk",
+            "email": "itzming5476@gmail.com"
+        }
+    ],
+    "require": {
+        "heroku/heroku-buildpack-php": "*"
+    }
+}
