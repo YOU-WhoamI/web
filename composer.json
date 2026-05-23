@@ -1,6 +1,10 @@
 {
     "require": {
-        "php": "8.1.0",
-        "ext-mysqli": "*"
+        "php": ">=7.4.0"
+    },
+    "config": {
+        "platform": {
+            "php": "8.1.0"
+        }
     }
 }
